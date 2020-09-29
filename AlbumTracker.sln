@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlbumTracker.API", "AlbumTracker\AlbumTracker.API.csproj", "{B78360EB-4285-46DC-AC6E-0ADEC0C5556F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Auth.API", "..\Auth.API\Auth.API\Auth.API.csproj", "{F5E2F84B-102B-4D9E-8193-D4D947EA8443}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B78360EB-4285-46DC-AC6E-0ADEC0C5556F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B78360EB-4285-46DC-AC6E-0ADEC0C5556F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B78360EB-4285-46DC-AC6E-0ADEC0C5556F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B78360EB-4285-46DC-AC6E-0ADEC0C5556F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5E2F84B-102B-4D9E-8193-D4D947EA8443}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5E2F84B-102B-4D9E-8193-D4D947EA8443}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5E2F84B-102B-4D9E-8193-D4D947EA8443}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5E2F84B-102B-4D9E-8193-D4D947EA8443}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CB127376-1B5F-4DBF-B072-29A30CD6C5AB}
+	EndGlobalSection
+EndGlobal
