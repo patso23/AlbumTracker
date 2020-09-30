@@ -296,7 +296,7 @@
           "lib/netstandard1.3/Newtonsoft.Json.dll": {}
         }
       },
-      "Npgsql/4.1.4": {
+      "Npgsql/4.1.5": {
         "type": "package",
         "dependencies": {
           "System.Runtime.CompilerServices.Unsafe": "4.6.0"
@@ -1001,6 +1001,19 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlDocument.dll": {}
         }
+      },
+      "Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "npgsql": "4.1.5"
+        },
+        "compile": {
+          "bin/placeholder/Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Repository.dll": {}
+        }
       }
     }
   },
@@ -1395,10 +1408,10 @@
         "tools/install.ps1"
       ]
     },
-    "Npgsql/4.1.4": {
-      "sha512": "qLwnSF7GAAxxrNFH3EprG352CJbhTCIDkk9PJ3/6aBeMOZBq+QMI1Yxsi9aUrBJwE51PaMLIYw0eq/bv9CGQTw==",
+    "Npgsql/4.1.5": {
+      "sha512": "juDlNse+SKfXRP0VSgpJkpdCcaVLZt8m37EHdRX+8hw+GG69Eat1Y0MdEfl+oetdOnf9E133GjIDEjg9AF6HSQ==",
       "type": "package",
-      "path": "npgsql/4.1.4",
+      "path": "npgsql/4.1.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1410,7 +1423,7 @@
         "lib/netstandard2.0/Npgsql.xml",
         "lib/netstandard2.1/Npgsql.dll",
         "lib/netstandard2.1/Npgsql.xml",
-        "npgsql.4.1.4.nupkg.sha512",
+        "npgsql.4.1.5.nupkg.sha512",
         "npgsql.nuspec",
         "postgresql.png"
       ]
@@ -4078,6 +4091,11 @@
         "system.xml.xmldocument.4.3.0.nupkg.sha512",
         "system.xml.xmldocument.nuspec"
       ]
+    },
+    "Repository/1.0.0": {
+      "type": "project",
+      "path": "../../Repository/Repository/Repository.csproj",
+      "msbuildProject": "../../Repository/Repository/Repository.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4085,7 +4103,8 @@
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 3.1.8",
       "Microsoft.AspNetCore.Authentication.OpenIdConnect >= 3.1.8",
       "Microsoft.AspNetCore.Cors >= 2.2.0",
-      "Npgsql >= 4.1.4",
+      "Npgsql >= 4.1.5",
+      "Repository >= 1.0.0",
       "System.IdentityModel.Tokens.Jwt >= 6.7.1"
     ]
   },
@@ -4114,7 +4133,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\poshea\\source\\repos\\Repository\\Repository\\Repository.csproj": {
+              "projectPath": "C:\\Users\\poshea\\source\\repos\\Repository\\Repository\\Repository.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -4140,7 +4163,7 @@
           },
           "Npgsql": {
             "target": "Package",
-            "version": "[4.1.4, )"
+            "version": "[4.1.5, )"
           },
           "System.IdentityModel.Tokens.Jwt": {
             "target": "Package",

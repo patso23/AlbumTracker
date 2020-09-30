@@ -27,7 +27,8 @@
           "Microsoft.AspNetCore.Authentication.JwtBearer": "3.1.8",
           "Microsoft.AspNetCore.Authentication.OpenIdConnect": "3.1.8",
           "Microsoft.AspNetCore.Cors": "2.2.0",
-          "Npgsql": "4.1.4",
+          "Npgsql": "4.1.5",
+          "Repository": "1.0.0",
           "System.IdentityModel.Tokens.Jwt": "6.7.1",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
@@ -520,14 +521,14 @@
           "lib/netstandard1.3/Newtonsoft.Json.dll": {}
         }
       },
-      "Npgsql/4.1.4": {
+      "Npgsql/4.1.5": {
         "dependencies": {
           "System.Runtime.CompilerServices.Unsafe": "4.6.0"
         },
         "runtime": {
           "lib/netcoreapp3.0/Npgsql.dll": {
-            "assemblyVersion": "4.1.4.0",
-            "fileVersion": "4.1.4.0"
+            "assemblyVersion": "4.1.5.0",
+            "fileVersion": "4.1.5.0"
           }
         },
         "compile": {
@@ -931,6 +932,17 @@
           "System.Text.Encoding": "4.3.0",
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0"
+        }
+      },
+      "Repository/1.0.0": {
+        "dependencies": {
+          "Npgsql": "4.1.5"
+        },
+        "runtime": {
+          "Repository.dll": {}
+        },
+        "compile": {
+          "Repository.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -2787,12 +2799,12 @@
       "path": "newtonsoft.json/10.0.1",
       "hashPath": "newtonsoft.json.10.0.1.nupkg.sha512"
     },
-    "Npgsql/4.1.4": {
+    "Npgsql/4.1.5": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-qLwnSF7GAAxxrNFH3EprG352CJbhTCIDkk9PJ3/6aBeMOZBq+QMI1Yxsi9aUrBJwE51PaMLIYw0eq/bv9CGQTw==",
-      "path": "npgsql/4.1.4",
-      "hashPath": "npgsql.4.1.4.nupkg.sha512"
+      "sha512": "sha512-juDlNse+SKfXRP0VSgpJkpdCcaVLZt8m37EHdRX+8hw+GG69Eat1Y0MdEfl+oetdOnf9E133GjIDEjg9AF6HSQ==",
+      "path": "npgsql/4.1.5",
+      "hashPath": "npgsql.4.1.5.nupkg.sha512"
     },
     "System.Buffers/4.5.0": {
       "type": "package",
@@ -3129,6 +3141,11 @@
       "sha512": "sha512-lJ8AxvkX7GQxpC6GFCeBj8ThYVyQczx2+f/cWHJU8tjS7YfI6Cv6bon70jVEgs2CiFbmmM8b9j1oZVx0dSI2Ww==",
       "path": "system.xml.xmldocument/4.3.0",
       "hashPath": "system.xml.xmldocument.4.3.0.nupkg.sha512"
+    },
+    "Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
       "type": "referenceassembly",

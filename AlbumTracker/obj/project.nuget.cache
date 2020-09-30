@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "MI5gZaQ1v0dXLJvjZG4hD8C+XuH51M7yzl24b97Z1I/LQ8M0S4bn7jdSvmRMTegeXSm6zW2AVD38zQ0JJIaTnQ==",
+  "dgSpecHash": "Oi90H/99AIGUu2UVzRn7SXJBjeHBuE5/Q8rGIt1Tyf4EK7iLneCSZkSWmPj5p3SFzPwRWpX7/V3RI8pHlVlVew==",
   "success": true,
   "projectFilePath": "C:\\Users\\poshea\\source\\repos\\AlbumTracker\\AlbumTracker\\AlbumTracker.API.csproj",
   "expectedPackageFiles": [
@@ -26,7 +26,7 @@
     "C:\\Users\\poshea\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\poshea\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\poshea\\.nuget\\packages\\newtonsoft.json\\10.0.1\\newtonsoft.json.10.0.1.nupkg.sha512",
-    "C:\\Users\\poshea\\.nuget\\packages\\npgsql\\4.1.4\\npgsql.4.1.4.nupkg.sha512",
+    "C:\\Users\\poshea\\.nuget\\packages\\npgsql\\4.1.5\\npgsql.4.1.5.nupkg.sha512",
     "C:\\Users\\poshea\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\poshea\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\poshea\\.nuget\\packages\\system.collections.nongeneric\\4.3.0\\system.collections.nongeneric.4.3.0.nupkg.sha512",

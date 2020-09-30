@@ -5,7 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using AlbumTracker.Services;
+using Repository;
+using Microsoft.Extensions.Configuration;
 
 namespace AlbumTracker.Controllers
 {
@@ -14,19 +15,21 @@ namespace AlbumTracker.Controllers
     public class SongController : ControllerBase
     {
         private readonly ILogger<SongController> _logger;
+        private readonly IConfiguration _configuration;
 
-        public SongController(ILogger<SongController> logger)
+        public SongController(ILogger<SongController> logger, IConfiguration configuration)
         {
             _logger = logger;
+            _configuration = configuration;
         }
 
         [HttpPost]
         [Authorize]
         public IActionResult Create([FromBody] Song song)
         {
-            DataAccess acc = new DataAccess();
+            Repository.Repository repo = new Repository.Repository(_configuration["connectionString"]);
 
-            return Ok(acc.Create(song));
+            return Ok(repo.Create(song));
 
         }
 
@@ -34,9 +37,9 @@ namespace AlbumTracker.Controllers
         [Authorize]
         public IActionResult CreateSongs([FromBody] List<Song> songs)
         {
-            DataAccess acc = new DataAccess();
+            Repository.Repository repo = new Repository.Repository(_configuration["connectionString"]);
 
-            return Ok(acc.Create(songs));
+            return Ok(repo.Create(songs));
         }
 
         [HttpGet("")]
@@ -44,9 +47,9 @@ namespace AlbumTracker.Controllers
         public IActionResult Get()
         {
 
-            DataAccess acc = new DataAccess();
+            Repository.Repository repo = new Repository.Repository(_configuration["connectionString"]);
 
-            return Ok(acc.GetAll(new List<Song>()));
+            return Ok(repo.Get(new List<Song>()));
         }
 
         [HttpGet("id/{id}")]
@@ -54,9 +57,9 @@ namespace AlbumTracker.Controllers
         public IActionResult GetById(int id)
         {
 
-            DataAccess acc = new DataAccess();
+            Repository.Repository repo = new Repository.Repository(_configuration["connectionString"]);
 
-            var result = acc.GetById(new Song(), id);
+            var result = repo.GetById(new Song(), id);
 
             if (result.Id != 0)
             {
@@ -72,9 +75,9 @@ namespace AlbumTracker.Controllers
         [Authorize]
         public IActionResult GetByName(string name)
         {
-            DataAccess acc = new DataAccess();
+            Repository.Repository repo = new Repository.Repository(_configuration["connectionString"]);
 
-            var result = acc.GetByName(new Song(), name);
+            var result = repo.GetByName(new Song(), name);
 
             if (result.Id != 0)
             {
@@ -90,9 +93,9 @@ namespace AlbumTracker.Controllers
         [Authorize]
         public IActionResult UpdateById(int id, [FromBody] Song song)
         {
-            DataAccess acc = new DataAccess();
+            Repository.Repository repo = new Repository.Repository(_configuration["connectionString"]); 
 
-            return Ok(acc.Update(id, song));
+            return Ok(repo.Update(song, id));
         }
 
         //delete
@@ -101,8 +104,9 @@ namespace AlbumTracker.Controllers
         public IActionResult DeleteById(int id)
         {
 
-            DataAccess acc = new DataAccess();
-            acc.DeleteById(new Song(), id);
+            Repository.Repository repo = new Repository.Repository(_configuration["connectionString"]);
+            repo.DeleteById(new Song(), id);
+
             
             return Ok();
 
