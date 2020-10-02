@@ -26,7 +26,7 @@ namespace AlbumTracker.API.Controllers
         [Authorize]
         public IActionResult Create([FromBody] Album album)
         {
-            Repository.Repository repo = new Repository.Repository(_configuration["connectionString"]);
+            AlbumRepository repo = new AlbumRepository(_configuration);
 
             return Ok(repo.Create(album));
 
@@ -37,9 +37,9 @@ namespace AlbumTracker.API.Controllers
         public IActionResult Get()
         {
 
-            Repository.Repository repo = new Repository.Repository(_configuration["connectionString"]);
+            AlbumRepository repo = new AlbumRepository(_configuration);
 
-            return Ok(repo.Get(new List<Album>()));
+            return Ok(repo.Get());
         }
 
         [HttpGet("id/{id}")]
@@ -47,9 +47,9 @@ namespace AlbumTracker.API.Controllers
         public IActionResult GetById(int id)
         {
 
-            Repository.Repository repo = new Repository.Repository(_configuration["connectionString"]);
+            AlbumRepository repo = new AlbumRepository(_configuration);
 
-            var result = repo.GetById(new Album(), id);
+            var result = repo.GetById(id);
 
             if(result.Id != 0)
             {
@@ -65,9 +65,9 @@ namespace AlbumTracker.API.Controllers
         [Authorize]
         public IActionResult GetByName(string name)
         {
-            Repository.Repository repo = new Repository.Repository(_configuration["connectionString"]);
+            AlbumRepository repo = new AlbumRepository(_configuration);
 
-            var result = repo.GetByName(new Album(), name);
+            var result = repo.GetByName(name);
 
             if (result.Id != 0)
             {
@@ -83,7 +83,7 @@ namespace AlbumTracker.API.Controllers
         [Authorize]
         public IActionResult UpdateById(int id, [FromBody] Album album)
         {
-            Repository.Repository repo = new Repository.Repository(_configuration["connectionString"]);
+           AlbumRepository repo = new AlbumRepository(_configuration);
 
             return Ok(repo.Update(album, id));
         }
@@ -94,8 +94,8 @@ namespace AlbumTracker.API.Controllers
         public IActionResult DeleteById(int id)
         {
 
-            Repository.Repository repo = new Repository.Repository(_configuration["connectionString"]);
-            repo.DeleteById(new Album(), id);
+            AlbumRepository repo = new AlbumRepository(_configuration);
+            repo.DeleteById(id);
             return Ok();
 
         }

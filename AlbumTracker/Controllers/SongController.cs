@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Repository;
 using Microsoft.Extensions.Configuration;
 
 namespace AlbumTracker.Controllers
@@ -27,29 +26,21 @@ namespace AlbumTracker.Controllers
         [Authorize]
         public IActionResult Create([FromBody] Song song)
         {
-            Repository.Repository repo = new Repository.Repository(_configuration["connectionString"]);
+            SongRepository repo = new SongRepository(_configuration);
 
             return Ok(repo.Create(song));
 
         }
 
-        [HttpPost("songs")]
-        [Authorize]
-        public IActionResult CreateSongs([FromBody] List<Song> songs)
-        {
-            Repository.Repository repo = new Repository.Repository(_configuration["connectionString"]);
-
-            return Ok(repo.Create(songs));
-        }
 
         [HttpGet("")]
         [Authorize]
         public IActionResult Get()
         {
 
-            Repository.Repository repo = new Repository.Repository(_configuration["connectionString"]);
+            SongRepository repo = new SongRepository(_configuration);
 
-            return Ok(repo.Get(new List<Song>()));
+            return Ok(repo.Get());
         }
 
         [HttpGet("id/{id}")]
@@ -57,9 +48,9 @@ namespace AlbumTracker.Controllers
         public IActionResult GetById(int id)
         {
 
-            Repository.Repository repo = new Repository.Repository(_configuration["connectionString"]);
+            SongRepository repo = new SongRepository(_configuration);
 
-            var result = repo.GetById(new Song(), id);
+            var result = repo.GetById(id);
 
             if (result.Id != 0)
             {
@@ -75,9 +66,9 @@ namespace AlbumTracker.Controllers
         [Authorize]
         public IActionResult GetByName(string name)
         {
-            Repository.Repository repo = new Repository.Repository(_configuration["connectionString"]);
+            SongRepository repo = new SongRepository(_configuration);
 
-            var result = repo.GetByName(new Song(), name);
+            var result = repo.GetByName(name);
 
             if (result.Id != 0)
             {
@@ -93,7 +84,7 @@ namespace AlbumTracker.Controllers
         [Authorize]
         public IActionResult UpdateById(int id, [FromBody] Song song)
         {
-            Repository.Repository repo = new Repository.Repository(_configuration["connectionString"]); 
+            SongRepository repo = new SongRepository(_configuration); 
 
             return Ok(repo.Update(song, id));
         }
@@ -104,8 +95,8 @@ namespace AlbumTracker.Controllers
         public IActionResult DeleteById(int id)
         {
 
-            Repository.Repository repo = new Repository.Repository(_configuration["connectionString"]);
-            repo.DeleteById(new Song(), id);
+            SongRepository repo = new SongRepository(_configuration);
+            repo.DeleteById(id);
 
             
             return Ok();

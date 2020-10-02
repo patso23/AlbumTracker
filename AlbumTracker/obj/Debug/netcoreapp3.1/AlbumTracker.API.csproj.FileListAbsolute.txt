@@ -31,3 +31,6 @@ C:\Users\poshea\source\repos\AlbumTracker\AlbumTracker\obj\Debug\netcoreapp3.1\A
 C:\Users\poshea\source\repos\AlbumTracker\AlbumTracker\obj\Debug\netcoreapp3.1\AlbumTracker.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\poshea\source\repos\AlbumTracker\AlbumTracker\bin\Debug\netcoreapp3.1\Repository.dll
 C:\Users\poshea\source\repos\AlbumTracker\AlbumTracker\bin\Debug\netcoreapp3.1\Repository.pdb
+C:\Users\poshea\source\repos\AlbumTracker\AlbumTracker\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+C:\Users\poshea\source\repos\AlbumTracker\AlbumTracker\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\poshea\source\repos\AlbumTracker\AlbumTracker\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll

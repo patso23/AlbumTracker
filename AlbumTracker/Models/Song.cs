@@ -7,9 +7,10 @@ public class Song
 {
     public int Id { get; set; }
 
+    public string Name { get; set; }
+    
+    public int TrackNumber { get; set; }
+    
     public int AlbumId { get; set; }
 
-    public string Name { get; set; }
-
-    public int TrackNumber { get; set; }
 }

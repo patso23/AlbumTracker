@@ -13,9 +13,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\..\Repository\Repository\Repository.csproj">
-	    <Private>true</Private>
-	  </ProjectReference>
+	  <ProjectReference Include="..\..\Repository\Repository\Repository.csproj" />
 	</ItemGroup>
 
 </Project>
